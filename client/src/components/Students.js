@@ -13,7 +13,7 @@ const Students = () => {
     const fetchAllStudents = async () => {
       try {
        // const res = await axios.get("/api/students");
-       const res = await fetch(`${process.env.REACT_APP_API_URL}/api/students`);
+       const res = await axios.get(`${process.env.REACT_APP_API_URL}/api/students`);
         setStudents(res.data);
         setError("");
       } catch (err) {
