@@ -32,7 +32,9 @@ const UpdateStudent = () => {
       setLoading(true);
       
       // Fetch student data
-      const studentRes = await axios.get(`/api/students/${id}`);
+      
+      const studentRes = await axios.get(`${process.env.REACT_APP_API_URL}/api/students/${id}`);
+      //const studentRes = await axios.get(`/api/students/${id}`);
       
       if (studentRes.data.error) {
         setError(studentRes.data.error);

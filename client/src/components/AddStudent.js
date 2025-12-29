@@ -24,7 +24,8 @@ const AddStudent = () => {
 
   const fetchMajors = async () => {
     try {
-      const res = await axios.get("/api/students/majors");
+      const res = await axios.get(`${process.env.REACT_APP_API_URL}/api/students/majors`);
+      //const res = await axios.get("/api/students/majors");
       setMajors(res.data);
     } catch (err) {
       console.log(err);
