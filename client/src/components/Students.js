@@ -29,7 +29,8 @@ const Students = () => {
   const handleDelete = async (id) => {
     if (window.confirm("Are you sure you want to delete this student?")) {
       try {
-        await axios.delete(`/api/students/${id}`);
+        await axios.delete(`${process.env.REACT_APP_API_URL}/api/students/${id}`);
+        //await axios.delete(`/api/students/${id}`);
         setStudents(students.filter(student => student.StdID !== id));
         setSuccess("Student deleted successfully!");
         setTimeout(() => setSuccess(""), 3000);
