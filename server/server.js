@@ -6,7 +6,7 @@ require("dotenv").config();
 
 const studentsRoutes = require("./routes/students");
 
-const port = process.env.PORT || 5000;
+const PORT = process.env.PORT || 8080;
 const app = express();
 
 // Create upload directory if it doesn't exist
