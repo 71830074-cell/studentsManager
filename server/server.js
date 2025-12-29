@@ -19,7 +19,7 @@ if (!fs.existsSync(uploadDir)) {
 // Middleware - CORS setup
 app.use(cors({
   origin: ["http://localhost:3000", // Your React app port
-  "https://your-site.netlify.app"], // Add your deployed frontend URL
+  "https://studentsmanager43.netlify.app"], // Add your deployed frontend URL
   credentials: true
 }));
 app.use(express.json());
