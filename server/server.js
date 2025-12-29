@@ -6,7 +6,7 @@ require("dotenv").config();
 
 const studentsRoutes = require("./routes/students");
 
-const PORT = process.env.PORT || 8080;
+const port = process.env.PORT || 8080;
 const app = express();
 
 // Create upload directory if it doesn't exist
@@ -68,7 +68,7 @@ app.use((req, res) => {
 });
 
 // Start server
-app.listen(PORT, () => {
+app.listen(port, () => {
   console.log(`Server running on http://localhost:${port}`);
   console.log(`Upload directory: ${uploadDir}`);
 });
